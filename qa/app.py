@@ -5,9 +5,15 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route('/home', methods=['GET', 'POST'])
-def validate():
+@app.route('/home')
+def home():
     return render_template('index.html')
+
+
+
+@app.route('/about')
+def home():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
