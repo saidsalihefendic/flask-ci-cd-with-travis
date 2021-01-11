@@ -1,12 +1,12 @@
 import unittest
-import pandas as pd
-from qa.app import app
+from app.app import app
+
 
 class TestAskMe(unittest.TestCase):
 
     def setUp(self):
         self.app = app.test_client()
-    
+
     def tearDown(self):
         pass
 
