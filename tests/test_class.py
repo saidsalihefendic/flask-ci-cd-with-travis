@@ -17,3 +17,7 @@ class TestAskMe(unittest.TestCase):
     def test_faulty_page(self):
         response = self.app.get('/faulty', follow_redirects=True)
         self.assertEqual(response.status_code, 404)
+
+    def test_about(self):
+        response = self.app.get('/about', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
