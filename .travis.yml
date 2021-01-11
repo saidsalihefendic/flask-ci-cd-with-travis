@@ -1,3 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
 language: python
 
 python:
@@ -9,3 +14,6 @@ install:
 script:
   - python3 -m pytest -v
   # - flake8
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
