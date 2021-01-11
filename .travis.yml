@@ -8,4 +8,4 @@ install:
 
 script:
   - python3 -m pytest -v
-  - flake8
+  # - flake8
